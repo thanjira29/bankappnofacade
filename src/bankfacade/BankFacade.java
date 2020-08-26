@@ -22,7 +22,7 @@ public class BankFacade {
      */
     public static void main(String[] args) {
         MyFacade obj = new MyFacade();
-        AccountIf account;
+        AccountIf acc;
 
         CustomerIf cust1 = obj.getBankCustomer("John");
         System.out.println("Customer and account information");
@@ -36,7 +36,7 @@ public class BankFacade {
 
         System.out.println("Do Deposit Account Number 12345");
         obj.doDeposit(500, cust1, 12345);
-        System.out.println("Account Number "+acc.getAccountNumber() + " has " + acc.getBalance());)
+        System.out.println("Account Number " + acc.getAccountNumber() + " has " + acc.getBalance());
 
         System.out.println("--- All Account ---");
         ArrayList<AccountIf> accounts1 = obj.getBankCustomer("John").getllAccounts();
@@ -53,12 +53,12 @@ public class BankFacade {
 
         acc = obj.getBankAccount(cust2, 12347);
         System.out.println("Account Number: " + acc.getAccountNumber() + " has " + acc.getBalance());
-        acc = obj.getBankAccount(cust1, 12348);
+        acc = obj.getBankAccount(cust2, 12348);
         System.out.println("Account Number: " + acc.getAccountNumber() + " has " + acc.getBalance());
 
         System.out.println("Do Deposit Account Number 12348");
         obj.doDeposit(1200, cust2, 12348);
-        System.out.println("Account Number "+acc.getAccountNumber() + " has " + acc.getBalance());)
+        System.out.println("Account Number "+acc.getAccountNumber() + " has " + acc.getBalance());
 
         System.out.println("--- All Account ---");
         ArrayList<AccountIf> accounts2 = obj.getBankCustomer("Mary").getllAccounts();

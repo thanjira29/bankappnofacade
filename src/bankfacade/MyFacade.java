@@ -47,7 +47,7 @@ public class MyFacade {
         return cust.getAccount(accNo);
     }
 
-    public CustomerIf getBankCustomer(string custName) {
+    public CustomerIf getBankCustomer(String custName) {
         for(CustomerIf custn : customers) {
             if(custn.getCustomerName().equals(custName)) {
                 return custn;
